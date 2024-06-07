@@ -1,4 +1,12 @@
 .App {
+  display: flex;
   font-size: x-large;
   margin-left: 20px;
+  flex-direction: column;
+  width: 15rem;
+  gap: 1rem;
+}
+
+.book-result {
+  width: 100vw;
 }

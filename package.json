@@ -10,8 +10,9 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
     "@testing-library/user-event": "^14.4.3",
-    "axios": "^1.4.0",
+    "axios": "^1.7.2",
     "axios-mock-adapter": "^1.21.4",
     "msw": "^1.2.1",
     "node-fetch": "^3.3.2",
