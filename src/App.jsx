@@ -15,7 +15,9 @@ function App() {
   };
 
   useEffect(() => {
-    getBook();
+    if (findBook !== "") {
+      getBook();
+    }
   }, [findBook]);
 
   const handleInput = (event) => {
@@ -32,13 +34,17 @@ function App() {
         onChange={handleInput}
       />
       <div className="book-result">
-        {bookResult.map((item, index) => {
-          return (
-            <div key={index} className="show-book">
-              <h3>{item.volumeInfo.title}</h3>
-            </div>
-          );
-        })}
+        <ul>
+          {findBook !== ""
+            ? bookResult.map((item, index) => {
+                return (
+                  <div key={index} className="show-book">
+                    <li>{item.volumeInfo.title}</li>
+                  </div>
+                );
+              })
+            : null}
+        </ul>
       </div>
     </div>
   );
